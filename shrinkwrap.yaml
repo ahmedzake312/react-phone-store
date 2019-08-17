@@ -2,6 +2,7 @@ dependencies:
   bootstrap: 4.3.1
   react: 16.8.6
   react-dom: 16.8.6
+  react-paypal-express-checkout: 1.0.5
   react-router-dom: 5.0.1
   react-scripts: 3.0.1
   styled-components: 4.3.2
@@ -2803,7 +2804,7 @@ packages:
       integrity: sha512-YVsDA8HpAKklhFLJtl9+AgaxrDaor8gGvDFlsg1ByOS0IPGUovumdv4/gJiAnLcDmZmKlH6+9sVOz4NVW7emAg==
   /babel-runtime/6.26.0:
     dependencies:
-      core-js: 2.6.5
+      core-js: 2.6.9
       regenerator-runtime: 0.11.1
     dev: false
     resolution:
@@ -3526,10 +3527,11 @@ packages:
     dev: false
     resolution:
       integrity: sha512-mSxeQ6IghKW3MoyF4cz19GJ1cMm7761ON+WObSyLfTu/Jn3x7w4NwNFnrZxgl4MTSvYYepVLNuRtlB4loMwJ5g==
-  /core-js/2.6.5:
+  /core-js/2.6.9:
     dev: false
+    requiresBuild: true
     resolution:
-      integrity: sha512-klh/kDpwX8hryYL14M9w/xei6vrv6sE8gTHDG7/T/+SEovB/G4ejwcfE/CBzO6Edsu+OETZMZ3wcX/EjUkrl5A==
+      integrity: sha512-HOpZf6eXmnl7la+cUdMnLvUxKNqLUzJvgIziQ0DiF3JwSImNphIqdGqzj6hIKyX04MmV0poclQ7+wjWvxQyR2A==
   /core-js/3.0.1:
     dev: false
     resolution:
@@ -5363,6 +5365,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-0nRXAQJabHdabFRXk+1QL8DGSaE=
+  /hoist-non-react-statics/1.2.0:
+    dev: false
+    resolution:
+      integrity: sha1-qkSM8JhtVcxAdzsXF0t90GbLfPs=
   /hoist-non-react-statics/3.3.0:
     dependencies:
       react-is: 16.8.6
@@ -8874,6 +8880,14 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-LbVpT1NdzTdDDs7xEZdebjDrqsvKi5UyVKUQqtTYYNyC1JJYVAwNQWe4ybWvoT2V2WW9PGVO2u5Y6aVj4ER/Ow==
+  /react-async-script-loader/0.3.0:
+    dependencies:
+      hoist-non-react-statics: 1.2.0
+    dev: false
+    peerDependencies:
+      react: ^15.5.4
+    resolution:
+      integrity: sha1-x0KzyiXgi6Yat+tkNx+BQCdpK4Y=
   /react-dev-utils/9.0.1:
     dependencies:
       '@babel/code-frame': 7.0.0
@@ -8925,6 +8939,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
+  /react-paypal-express-checkout/1.0.5:
+    dependencies:
+      babel-runtime: 6.26.0
+      prop-types: 15.7.2
+      react-async-script-loader: 0.3.0
+    dev: false
+    peerDependencies:
+      react: ~0.14.8 || ^15.5.0
+      react-dom: ~0.14.8 || ^15.5.0
+    resolution:
+      integrity: sha512-J2s/C9ftuG/ja1/QelGSg4veXij5p9zNhOqr2wTw6ERprWpHbQm/JNx/U43G5aiqAnnoFxlKsFl+t1nAOqbw6w==
   /react-router-dom/5.0.1:
     dependencies:
       '@babel/runtime': 7.5.5
@@ -11197,6 +11222,7 @@ specifiers:
   bootstrap: ^4.3.1
   react: ^16.8.6
   react-dom: ^16.8.6
+  react-paypal-express-checkout: ^1.0.5
   react-router-dom: ^5.0.0
   react-scripts: ^3.0.1
   styled-components: ^4.3.2
